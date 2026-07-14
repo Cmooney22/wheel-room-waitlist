@@ -169,6 +169,13 @@
 
   .banner{background:rgba(240,144,42,.12);border-bottom:1px solid rgba(240,144,42,.3);color:#f4b061;text-align:center;font-size:12.5px;font-weight:600;padding:8px 12px}
 
+  /* Kit embed styled to match */
+  .ck-embed{max-width:520px}
+  .ck-embed .formkit-form{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+  .ck-embed .formkit-input{background:var(--card)!important;border:1.5px solid var(--line2)!important;color:var(--ink)!important;border-radius:12px!important;padding:15px 16px!important;font-size:16px!important}
+  .ck-embed .formkit-input::placeholder{color:var(--dim)!important}
+  .ck-embed .formkit-submit{background:linear-gradient(180deg,var(--green-b),var(--green))!important;border:0!important;border-radius:12px!important}
+  .ck-embed .formkit-submit span{color:#04120a!important;font-weight:800!important}
   @media(max-width:880px){
     h1{font-size:40px} h2{font-size:29px}
     .hero-grid,.split{grid-template-columns:1fr;gap:34px}
@@ -209,10 +216,8 @@
           Embed → "HTML" tab → copy that form's action URL, and replace
           BOTH action="..." values in this file with it. One-line fix.
       -->
-      <form class="kitform" action="https://app.kit.com/forms/9683378/subscriptions" method="post">
-        <input type="email" name="email_address" placeholder="you@email.com" required>
-        <button class="btn" type="submit">Join the waitlist →</button>
-      </form>
+      <!-- Kit official embed — Kit renders & manages this form and saves every subscriber (form uid 47930158f7). -->
+      <div class="ck-embed"><script async data-uid="47930158f7" src="https://compoundingwithcody.kit.com/47930158f7/index.js"></script></div>
       <div class="fineprint">✓ No charge now &nbsp;·&nbsp; ✓ Founding rate locked for life &nbsp;·&nbsp; <b>Educational only — not financial advice</b></div>
     </div>
 
@@ -337,10 +342,7 @@
     <h2 style="margin-top:12px">Get first access to the room</h2>
     <p>Join the list to get in before anyone else — and lock the founding-member rate for life.</p>
     <div class="capture" style="text-align:center">
-      <form class="kitform" action="https://app.kit.com/forms/9683378/subscriptions" method="post">
-        <input type="email" name="email_address" placeholder="you@email.com" required>
-        <button class="btn" type="submit">Join the waitlist →</button>
-      </form>
+      <a class="btn" style="font-size:17px;padding:16px 34px" href="#join">Join the waitlist →</a>
       <div class="fineprint" style="text-align:center;margin-top:12px">No charge now · Educational only — not financial advice</div>
     </div>
   </div>
@@ -364,13 +366,4 @@
     e.preventDefault();
     var box = document.getElementById('email');
     if(box && !box.value.trim()) return false;
-    var form = document.getElementById('waitForm');
-    var ok = document.getElementById('successView');
-    if(form && ok){ form.style.display='none'; ok.style.display='block'; ok.scrollIntoView({behavior:'smooth',block:'center'}); }
-    else { alert("You're on the list! (Connect Kit to capture this for real.)"); }
-    return false;
-  }
-</script>
-</body>
-</html>
-                                                                                                                                                                               
+    var form = document.
