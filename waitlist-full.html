@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wheel Room — Founding Member Waitlist | Compounding with Cody</title>
+<meta name="description" content="Get first access to The Wheel Room — the trading cockpit and seasons system Cody uses to run the wheel strategy. Join the founding-member waitlist.">
+<style>
+  :root{
+    --bg:#0a0e13; --bg2:#0e141c; --card:#121a24; --card2:#161f2b;
+    --line:#223042; --line2:#2c3d52;
+    --ink:#eef3f8; --muted:#9fb0c3; --dim:#6f8098;
+    --green:#16a95a; --green-b:#1fd074; --green-glow:rgba(31,208,116,.35);
+    --amber:#f0902a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);line-height:1.6;
+    background:
+      radial-gradient(900px 500px at 78% -8%, rgba(31,208,116,.16), transparent 60%),
+      radial-gradient(800px 600px at 0% 8%, rgba(31,208,116,.08), transparent 55%),
+      var(--bg);
+    background-attachment:fixed;}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:84px 0}
+  h1,h2,h3{margin:0;line-height:1.12;letter-spacing:-.02em}
+  h1{font-size:56px;font-weight:850}
+  h2{font-size:38px;font-weight:820}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;color:var(--green-b)}
+  .muted{color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,var(--green-b),var(--green));
+    color:#04120a;font-weight:800;padding:15px 28px;border-radius:12px;font-size:16px;border:none;cursor:pointer;
+    box-shadow:0 10px 30px -8px var(--green-glow), inset 0 1px 0 rgba(255,255,255,.25);transition:.15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px var(--green-glow)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line2);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--green-b);color:var(--green-b)}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(10,14,19,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:850;font-size:17px}
+  .logo .mark{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-size:17px;
+    background:radial-gradient(circle at 30% 25%, #1fd074, #0c7a41);color:#04120a;
+    box-shadow:0 0 18px -2px var(--green-glow)}
+  .nav .links a{margin-left:26px;font-weight:600;font-size:14.5px;color:var(--muted)}
+  .nav .links a:hover{color:var(--ink)}
+  .nav .links .btn{margin-left:26px;padding:9px 18px;font-size:14px}
+
+  /* hero */
+  .hero{padding:70px 0 46px}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);
+    border-radius:999px;padding:7px 15px;font-size:12.5px;font-weight:700;color:var(--muted);margin-bottom:22px}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green-b);box-shadow:0 0 0 4px rgba(31,208,116,.18)}
+  .hero p.sub{font-size:19px;color:var(--muted);margin:22px 0 6px;max-width:540px}
+
+  /* capture form */
+  .capture{margin-top:26px;max-width:520px}
+  .capture form{display:flex;gap:10px}
+  .capture input[type=email]{flex:1;padding:15px 16px;border-radius:12px;font-size:16px;
+    background:var(--card);border:1.5px solid var(--line2);color:var(--ink);outline:none}
+  .capture input[type=email]::placeholder{color:var(--dim)}
+  .capture input[type=email]:focus{border-color:var(--green-b);box-shadow:0 0 0 3px rgba(31,208,116,.18)}
+  .fineprint{font-size:12.5px;color:var(--dim);margin-top:12px}
+  .fineprint b{color:var(--muted)}
+  .success{display:none;background:var(--card);border:1px solid var(--green);border-radius:14px;padding:20px 22px}
+  .success .big{color:var(--green-b);font-weight:800;font-size:17px;margin-bottom:4px}
+
+  .stats{display:flex;gap:34px;margin-top:34px}
+  .stat .n{font-size:30px;font-weight:850}
+  .stat .n b{background:linear-gradient(180deg,#eafff3,var(--green-b));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .l{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-top:2px}
+
+  /* hero visual — drop the render image here */
+  .visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line2);
+    background:
+      radial-gradient(60% 55% at 50% 40%, rgba(31,208,116,.28), transparent 70%),
+      linear-gradient(180deg,#0f1620,#0a0e13);
+    min-height:440px;display:grid;place-items:center;box-shadow:0 40px 90px -40px #000}
+  .visual img{width:100%;height:100%;object-fit:cover;display:block}
+  .visual .placeholder{text-align:center;padding:30px}
+  .visual .ring{width:150px;height:150px;border-radius:50%;margin:0 auto 20px;position:relative;
+    background:conic-gradient(from 210deg,#1f6feb,#16a95a,#f0902a,#e8590c,#1f6feb);
+    -webkit-mask:radial-gradient(farthest-side,transparent 58%,#000 60%);mask:radial-gradient(farthest-side,transparent 58%,#000 60%);
+    filter:drop-shadow(0 0 22px var(--green-glow));animation:spin 14s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .visual .ph-txt{font-size:13px;color:var(--dim);max-width:280px;margin:0 auto}
+  .visual .ph-txt b{color:var(--muted)}
+
+  /* trust strip */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}
+  .strip .wrap{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap;padding:20px 0;
+    color:var(--dim);font-weight:700;letter-spacing:.04em;font-size:13.5px}
+  .strip .sep{width:5px;height:5px;border-radius:50%;background:var(--line2)}
+
+  /* section heads */
+  .center{text-align:center;max-width:720px;margin:0 auto 52px}
+  .center h2{margin-top:12px}
+  .center p{font-size:17px;color:var(--muted);margin-top:14px}
+
+  /* cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);
+    border-radius:18px;padding:28px;transition:.18s}
+  .card:hover{border-color:var(--line2);transform:translateY(-3px)}
+  .card .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:16px;
+    background:rgba(31,208,116,.12);border:1px solid rgba(31,208,116,.25)}
+  .card h3{font-size:19px;margin-bottom:9px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .feat{list-style:none;padding:0;margin:20px 0 0}
+  .feat li{display:flex;gap:13px;margin-bottom:17px;font-size:15.5px;color:var(--muted)}
+  .feat .ck{flex:0 0 24px;height:24px;border-radius:7px;background:rgba(31,208,116,.14);border:1px solid rgba(31,208,116,.3);
+    color:var(--green-b);display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:1px}
+  .feat b{color:var(--ink);font-weight:700}
+  .panel{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;padding:24px;
+    box-shadow:0 30px 70px -40px #000}
+  .panel .kpis{display:flex;gap:12px;margin-bottom:14px}
+  .panel .kpi{flex:1;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .panel .kpi .l{font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+  .panel .kpi .v{font-size:23px;font-weight:850;margin-top:3px;color:var(--green-b)}
+  .panel .chat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:15px;font-size:14px;color:var(--muted)}
+  .panel .chat b{color:var(--ink)}
+  .seasonrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .sn{font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px}
+  .sn.w{background:rgba(31,111,235,.15);color:#6ea8ff;border:1px solid rgba(31,111,235,.3)}
+  .sn.s{background:rgba(240,144,42,.15);color:#f4b061;border:1px solid rgba(240,144,42,.3)}
+
+  /* founding perks band */
+  .band{background:linear-gradient(180deg,#0d141d,#0a0e13);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .perks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 40px;margin-top:8px}
+  .perks li{display:flex;gap:13px;font-size:16px;color:var(--muted);list-style:none}
+  .perks .ck{flex:0 0 26px;height:26px;border-radius:8px;background:rgba(31,208,116,.14);border:1px solid rgba(31,208,116,.3);
+    color:var(--green-b);display:grid;place-items:center;font-weight:800;margin-top:1px}
+  .perks b{color:var(--ink);font-weight:750}
+
+  /* credibility numbers */
+  .bignums{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
+  .bignums .b{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:34px 20px}
+  .bignums .n{font-size:44px;font-weight:850;color:var(--green-b)}
+  .bignums .l{color:var(--muted);font-size:14.5px;margin-top:6px}
+
+  /* faq */
+  .faq{max-width:780px;margin:0 auto}
+  details{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:12px;padding:2px 22px;margin-bottom:12px}
+  summary{cursor:pointer;font-weight:700;font-size:16.5px;padding:18px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:23px;color:var(--green-b);font-weight:400;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin:0 0 20px;color:var(--muted);font-size:15px}
+
+  /* final cta */
+  .final{position:relative;text-align:center;border-radius:26px;padding:64px 30px;overflow:hidden;
+    background:radial-gradient(70% 120% at 50% 0%, rgba(31,208,116,.22), transparent 60%), linear-gradient(180deg,#0f1822,#0b1017);
+    border:1px solid var(--line2)}
+  .final h2{font-size:40px}
+  .final p{max-width:520px;margin:16px auto 26px;font-size:18px;color:var(--muted)}
+  .final .capture{margin:0 auto}
+
+  /* footer */
+  footer{padding:46px 0 64px;color:var(--dim);font-size:13.5px;border-top:1px solid var(--line);margin-top:20px}
+  .disc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:26px;font-size:12px;line-height:1.7;color:var(--dim)}
+  .disc b{color:var(--muted)}
+  .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+
+  .banner{background:rgba(240,144,42,.12);border-bottom:1px solid rgba(240,144,42,.3);color:#f4b061;text-align:center;font-size:12.5px;font-weight:600;padding:8px 12px}
+
+  /* confirm reminder */
+  .confirm-note{margin-top:14px;max-width:520px;background:rgba(240,144,42,.10);border:1px solid rgba(240,144,42,.35);border-radius:12px;padding:12px 15px;font-size:13.5px;color:#f4b061;line-height:1.5}
+  .confirm-note b{color:#f8cd97}
+  /* Kit embed styled to match */
+  .ck-embed{max-width:520px}
+  .ck-embed .formkit-form{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+  .ck-embed .formkit-input{background:var(--card)!important;border:1.5px solid var(--line2)!important;color:var(--ink)!important;border-radius:12px!important;padding:15px 16px!important;font-size:16px!important}
+  .ck-embed .formkit-input::placeholder{color:var(--dim)!important}
+  .ck-embed .formkit-submit{background:linear-gradient(180deg,var(--green-b),var(--green))!important;border:0!important;border-radius:12px!important}
+  .ck-embed .formkit-submit span{color:#04120a!important;font-weight:800!important}
+  @media(max-width:880px){
+    h1{font-size:40px} h2{font-size:29px}
+    .hero-grid,.split{grid-template-columns:1fr;gap:34px}
+    .cards,.bignums,.perks{grid-template-columns:1fr}
+    .nav .links a{display:none}
+    .capture form{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav"><div class="wrap">
+  <div class="logo"><span class="mark">⚙</span> The Wheel Room</div>
+  <nav class="links">
+    <a href="#how">How it works</a>
+    <a href="#inside">What's inside</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn" href="#join">Join the waitlist</a>
+  </nav>
+</div></div>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <div class="badge"><span class="dot"></span> Founding-member waitlist · opening soon</div>
+    <h1>Know your season.<br>Sell your premium.</h1>
+    <p class="sub">The trading cockpit and "seasons" system I use to run the wheel strategy on a six-figure account. Join the founding group — get in first and lock the founding rate for life.</p>
+
+    <div class="capture" id="join">
+      <!--
+        ── KIT CONNECTION ──────────────────────────────────────────────
+        This form posts the email straight into Kit (double opt-in + the
+        "Wheel Room Waitlist" segment). The action URL uses your existing
+        waitlist form ID (9679146).
+        ⚠ TEST ONE SIGNUP after hosting. If the email does NOT appear in Kit:
+          Kit → Grow → Landing Pages & Forms → New → Form → open its
+          Embed → "HTML" tab → copy that form's action URL, and replace
+          BOTH action="..." values in this file with it. One-line fix.
+      -->
+      <!-- Kit official embed — Kit renders & manages this form and saves every subscriber (form uid 47930158f7). -->
+      <div class="ck-embed"><script async data-uid="47930158f7" src="https://compoundingwithcody.kit.com/47930158f7/index.js"></script></div>
+      <div class="fineprint">✓ No charge now &nbsp;·&nbsp; ✓ Founding rate locked for life &nbsp;·&nbsp; <b>Educational only — not financial advice</b></div>
+      <div class="confirm-note">📩 <b>One more step:</b> after you join, we email you a confirmation link — you must click it to lock your spot. Don't see it within a minute? Check your <b>spam</b> or <b>Promotions</b> folder.</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n"><b>631</b></div><div class="l">Real trades logged</div></div>
+      <div class="stat"><div class="n"><b>2 yrs</b></div><div class="l">Transparent track record</div></div>
+      <div class="stat"><div class="n"><b>4</b></div><div class="l">Seasons framework</div></div>
+    </div>
+  </div>
+
+  <!-- HERO VISUAL -->
+  <div class="visual">
+    <img src="wheel-room-hero.png" alt="The Wheel Room — the wheel options strategy cycle">
+  </div>
+</div></div></section>
+
+<div class="strip"><div class="wrap">
+  <span>AS SEEN ON THE CHANNEL</span><span class="sep"></span><span>▶ Compounding with Cody</span><span class="sep"></span><span>Cash-Secured Puts</span><span class="sep"></span><span>Covered Calls</span><span class="sep"></span><span>The Wheel</span>
+</div></div>
+
+<!-- PROBLEM / SOLUTION -->
+<section id="how"><div class="wrap">
+  <div class="center">
+    <div class="eyebrow">Why the Wheel Room</div>
+    <h2>Most wheel traders are flying blind</h2>
+    <p>Spreadsheets that don't match your broker. No feel for when to press or ease off. Guessing at strikes. The Wheel Room replaces all of it with a system.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="ic">🍂</div><h3>Trade in season</h3><p>The MACD-histogram seasons model tells you when it's Winter (sell puts hard) vs. Summer (ease off) — so you stop selling premium at the wrong time.</p></div>
+    <div class="card"><div class="ic">🎯</div><h3>Strikes at your rules</h3><p>Entry ideas built around your ~0.30 delta rule and current RSI — a starting point for your own decision, never a "do this" alert.</p></div>
+    <div class="card"><div class="ic">📓</div><h3>A journal that's honest</h3><p>Cycle-aware logging with breakevens that actually match your broker, so you always know your real cost basis and what you've truly kept.</p></div>
+  </div>
+</div></section>
+
+<!-- FEATURE SPLIT 1 -->
+<section id="inside"><div class="wrap"><div class="split">
+  <div>
+    <div class="eyebrow">The Command Center</div>
+    <h2 style="margin-top:12px">The cockpit I actually trade from</h2>
+    <p class="muted" style="font-size:16px;margin-top:12px">Not a demo. The same tool running my real account — with your data private to you.</p>
+    <ul class="feat">
+      <li><span class="ck">✓</span><span><b>This Week signal page</b> — what's covered, what needs attention, tied to each name's season and RSI.</span></li>
+      <li><span class="ck">✓</span><span><b>Live VIX read</b> — is premium thin or fat right now, in plain English.</span></li>
+      <li><span class="ck">✓</span><span><b>Option Coach AI</b> — talk through a position or the market before you place the trade.</span></li>
+      <li><span class="ck">✓</span><span><b>Season, delta &amp; RSI tagging</b> on every trade, so your analytics show what setups actually pay.</span></li>
+    </ul>
+  </div>
+  <div class="panel">
+    <div class="kpis">
+      <div class="kpi"><div class="l">Premium income (YTD)</div><div class="v">$14,577</div></div>
+      <div class="kpi"><div class="l">Realized P&amp;L</div><div class="v">$18,236</div></div>
+    </div>
+    <div class="chat"><b>Coach:</b> "AMZN is uncovered and sitting in Winter at 36 RSI. At your 0.30-delta rule, the $232.5 call is the natural cover — want me to sketch the premium and breakeven?"</div>
+    <div class="seasonrow"><span class="sn w">❄ SOFI Winter</span><span class="sn s">☀ WMT Summer</span><span class="sn w">❄ PFE Winter</span></div>
+  </div>
+</div></div></section>
+
+<!-- FEATURE SPLIT 2 -->
+<section><div class="wrap"><div class="split">
+  <div class="panel">
+    <div class="chat"><b>Sunday seasons read:</b> "Broad market is rolling into Winter. I'm leaning into puts on the names that already turned — full breakdown + my watchlist inside."</div>
+    <div class="seasonrow"><span class="sn w">❄ Market: Winter</span><span class="sn s">☀ Energy: Summer</span></div>
+  </div>
+  <div>
+    <div class="eyebrow">The Community</div>
+    <h2 style="margin-top:12px">You're not trading alone</h2>
+    <p class="muted" style="font-size:16px;margin-top:12px">The tool gives you the system. The room gives you the reps, the reads, and the people.</p>
+    <ul class="feat">
+      <li><span class="ck">✓</span><span><b>Weekly seasons read</b> — my market regime call and watchlist, every week.</span></li>
+      <li><span class="ck">✓</span><span><b>Monthly live Q&amp;A</b> — bring your positions, we work through them.</span></li>
+      <li><span class="ck">✓</span><span><b>A community of wheel traders</b> — share setups, keep each other honest.</span></li>
+      <li><span class="ck">✓</span><span><b>Member-only breakdowns</b> that never make it to the public channel.</span></li>
+    </ul>
+  </div>
+</div></div></section>
+
+<!-- FOUNDING PERKS -->
+<section class="band"><div class="wrap">
+  <div class="center">
+    <div class="eyebrow">Why join early</div>
+    <h2>Founding members get the best deal I'll ever offer</h2>
+  </div>
+  <ul class="perks">
+    <li><span class="ck">✓</span><span><b>Locked-in founding rate</b> — your price never goes up, for as long as you stay.</span></li>
+    <li><span class="ck">✓</span><span><b>First through the door</b> — access before it opens to the public channel.</span></li>
+    <li><span class="ck">✓</span><span><b>Direct input</b> — help shape the tool and the weekly reads while it's small.</span></li>
+    <li><span class="ck">✓</span><span><b>A founding badge</b> in the community — you were here first.</span></li>
+  </ul>
+</div></section>
+
+<!-- CREDIBILITY -->
+<section><div class="wrap">
+  <div class="center"><div class="eyebrow">Built on real reps</div><h2>Not theory — a logged track record</h2></div>
+  <div class="bignums">
+    <div class="b"><div class="n">631</div><div class="l">Trades logged over two years</div></div>
+    <div class="b"><div class="n">2</div><div class="l">Full years, through different markets</div></div>
+    <div class="b"><div class="n">4</div><div class="l">Seasons in the framework</div></div>
+  </div>
+  <p class="center muted" style="margin:26px auto 0;max-width:640px;font-size:13.5px">Figures reflect personal, historical trading activity for education. They are not a performance promise and not indicative of future results.</p>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq"><div class="wrap">
+  <div class="center"><div class="eyebrow">Questions</div><h2>Good to know</h2></div>
+  <div class="faq">
+    <details open><summary>Is this financial advice or a signal service?</summary><p>No. The Wheel Room is <b>educational</b>. The tool, the seasons reads, and the "at your rules" ideas are a framework and a starting point for your own decisions — not instructions to buy or sell. You are always responsible for your own trades.</p></details>
+    <details><summary>Do I have to connect my brokerage account?</summary><p>No. You log your trades (or paste them from your broker's export). Nothing here asks for your brokerage password, and any hosted version would only ever use official, read-only broker connections — never your credentials.</p></details>
+    <details><summary>I'm new to the wheel. Is this too advanced?</summary><p>You'll get more out of it if you know the basics of cash-secured puts and covered calls, but the seasons framework and the Coach are built to teach as you go. Join the waitlist and grow into it.</p></details>
+    <details><summary>What does it cost?</summary><p>Founding-member pricing will be shared when doors open — and waitlist members lock the lowest rate for life. Joining the list costs nothing and isn't a commitment.</p></details>
+    <details><summary>Will my data be private?</summary><p>Yes. Your logged positions are yours. The seasons reads and community are shared; your account and P&amp;L are not.</p></details>
+  </div>
+</div></section>
+
+<!-- FINAL CTA -->
+<section><div class="wrap">
+  <div class="final">
+    <div class="eyebrow">Founding waitlist</div>
+    <h2 style="margin-top:12px">Get first access to the room</h2>
+    <p>Join the list to get in before anyone else — and lock the founding-member rate for life.</p>
+    <div class="capture" style="text-align:center">
+      <a class="btn" style="font-size:17px;padding:16px 34px" href="#join">Join the waitlist →</a>
+      <div class="fineprint" style="text-align:center;margin-top:12px">No charge now · Educational only — not financial advice</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="disc">
+    <b>Important disclaimer.</b> The Wheel Room and Compounding with Cody provide <b>educational content only</b> and do <b>not</b> provide personalized investment, financial, legal, or tax advice, or any recommendation to buy or sell a security or adopt a strategy. Options trading involves substantial risk and is not suitable for every investor; you can lose more than your initial investment. Any figures shown are historical and personal and are <b>not indicative of future results</b>. You are solely responsible for your own trading decisions. Consult a licensed financial advisor before acting. <i>Placeholder — have a qualified attorney review before launch.</i>
+  </div>
+  <div class="foot-row">
+    <div>© 2026 Compounding with Cody · The Wheel Room</div>
+    <div>Terms · Privacy · Contact</div>
+  </div>
+</div></footer>
+
+<script>
+  // Demo behavior for local preview. Once you connect Kit (see the comment near the top form),
+  // Kit handles the submission and this can be removed.
+  function joinWaitlist(e){
+    e.preventDefault();
+    var box = document.getElementById('email');
+    if(box && !box.value.trim()) return false;
+    var form = document.getElementById('waitForm');
+    var ok = document.getElementById('successView');
+    if(form && ok){ form.style.display='none'; ok.style.display='block'; ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+    else { alert("You're on the list! (Connect Kit to capture this for real.)"); }
+    return false;
+  }
+</script>
+</body>
+</html>
