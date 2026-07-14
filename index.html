@@ -169,6 +169,9 @@
 
   .banner{background:rgba(240,144,42,.12);border-bottom:1px solid rgba(240,144,42,.3);color:#f4b061;text-align:center;font-size:12.5px;font-weight:600;padding:8px 12px}
 
+  /* confirm reminder */
+  .confirm-note{margin-top:14px;max-width:520px;background:rgba(240,144,42,.10);border:1px solid rgba(240,144,42,.35);border-radius:12px;padding:12px 15px;font-size:13.5px;color:#f4b061;line-height:1.5}
+  .confirm-note b{color:#f8cd97}
   /* Kit embed styled to match */
   .ck-embed{max-width:520px}
   .ck-embed .formkit-form{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
@@ -219,6 +222,7 @@
       <!-- Kit official embed — Kit renders & manages this form and saves every subscriber (form uid 47930158f7). -->
       <div class="ck-embed"><script async data-uid="47930158f7" src="https://compoundingwithcody.kit.com/47930158f7/index.js"></script></div>
       <div class="fineprint">✓ No charge now &nbsp;·&nbsp; ✓ Founding rate locked for life &nbsp;·&nbsp; <b>Educational only — not financial advice</b></div>
+      <div class="confirm-note">📩 <b>One more step:</b> after you join, we email you a confirmation link — you must click it to lock your spot. Don't see it within a minute? Check your <b>spam</b> or <b>Promotions</b> folder.</div>
     </div>
 
     <div class="stats">
@@ -352,18 +356,4 @@
 <footer><div class="wrap">
   <div class="disc">
     <b>Important disclaimer.</b> The Wheel Room and Compounding with Cody provide <b>educational content only</b> and do <b>not</b> provide personalized investment, financial, legal, or tax advice, or any recommendation to buy or sell a security or adopt a strategy. Options trading involves substantial risk and is not suitable for every investor; you can lose more than your initial investment. Any figures shown are historical and personal and are <b>not indicative of future results</b>. You are solely responsible for your own trading decisions. Consult a licensed financial advisor before acting. <i>Placeholder — have a qualified attorney review before launch.</i>
-  </div>
-  <div class="foot-row">
-    <div>© 2026 Compounding with Cody · The Wheel Room</div>
-    <div>Terms · Privacy · Contact</div>
-  </div>
-</div></footer>
-
-<script>
-  // Demo behavior for local preview. Once you connect Kit (see the comment near the top form),
-  // Kit handles the submission and this can be removed.
-  function joinWaitlist(e){
-    e.preventDefault();
-    var box = document.getElementById('email');
-    if(box && !box.value.trim()) return false;
-    var form = document.
+ 
